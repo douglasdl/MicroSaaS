@@ -31,3 +31,9 @@ rm public/*
 - [Figma](https://www.figma.com/design/mYIvARKWiAF7TQSik9xxqP/Project-in-bio?node-id=0-1&p=f&t=Fv6qZaRo8qvUPI2e-0)
 
 ### Create a Repository on Github
+
+
+## LP Interface and Inner Pages
+
+### Hero Section Start
+
