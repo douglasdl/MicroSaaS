@@ -1,4 +1,5 @@
 # MicroSaaS
+
 MicroSaaS
 
 ## First Steps
@@ -10,17 +11,19 @@ MicroSaaS
 ### Create Next App
 
 - Create the [Next.js](https://nextjs.org/docs/app/api-reference/cli/create-next-app) project:
+
 ```sh
 npx create-next-app@latest
 ```
 
-
 - Start the project:
+
 ```sh
 npm run dev
 ```
 
 - Clean the project:
+
 ```sh
 rm app/favicon.ico
 rm public/*
@@ -32,8 +35,11 @@ rm public/*
 
 ### Create a Repository on Github
 
-
 ## LP Interface and Inner Pages
 
 ### Hero Section Start
 
+```sh
+npm i tailwind-merge
+npm i clsx
+```
