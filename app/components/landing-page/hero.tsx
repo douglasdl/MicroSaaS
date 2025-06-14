@@ -1,6 +1,8 @@
 import { ProjectCard } from '../project-card'
 import { TotalVisits } from '../total-visits'
 import { Button } from '../ui/button'
+import { TextArea } from '../ui/text-area'
+import { TextInput } from '../ui/text-input'
 import { UserCard } from '../user-card'
 
 export default function Hero() {
@@ -18,7 +20,7 @@ export default function Hero() {
         <div className="flex items-center gap-2 w-full -mt-[10vh]">
           <span className="text-white text-xl">projectinbio.com</span>
           {/* TODO component */}
-          <input type="text" />
+          <TextInput />
           <Button>Criar agora</Button>
         </div>
         <div className="w-full flex items-center justify-center bg-[radial-gradient(circle_at_50%_50%,#4B2DBB, transparent_55%)]">
