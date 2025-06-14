@@ -43,3 +43,17 @@ rm public/*
 npm i tailwind-merge
 npm i clsx
 ```
+
+### Create the Button component
+
+### Create the input components
+
+### Hero Section continuation
+
+```sh
+npm i lucide-react
+```
+
+### Total Visits component
+
+### Finish the Hero Section
