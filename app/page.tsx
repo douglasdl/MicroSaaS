@@ -6,7 +6,7 @@ import VideoExplanation from './components/landing-page/video-explanation'
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto border">
+    <div className="max-w-7xl mx-auto">
       <Header />
       <Hero />
       <VideoExplanation />
