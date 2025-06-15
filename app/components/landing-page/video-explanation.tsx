@@ -1,9 +1,9 @@
+import { Play } from 'lucide-react'
+
 export default function VideoExplanation() {
   return (
-    <header className="bg-background-primary text-white">
-      <div className="container mx-auto">
-        <h1>VideoExplanation</h1>
-      </div>
-    </header>
+    <div className="border rounded-2xl border-border-primary aspect-video flex items-center justify-center my-20">
+      <Play className="text-accent-purple size-16" />
+    </div>
   )
 }
