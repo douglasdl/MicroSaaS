@@ -2,7 +2,7 @@ import { cn } from '@/app/lib/utils'
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'link'
   children?: ReactNode
 }
 
@@ -20,6 +20,7 @@ export function Button({
         variant === 'secondary' && 'bg-background-tertiary',
         variant === 'tertiary' && 'bg-[#1e1e1e] hover:bg-[#2e2e2e]',
         variant === 'ghost' && 'border-border-primary border',
+        variant === 'link' && 'text-accent-green p-0 hover:underline',
         props.className
       )}
     >
