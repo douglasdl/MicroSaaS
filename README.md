@@ -97,3 +97,20 @@ npm i lucide-react
 - 8. Click on the "Generate new private key" button then dloanlod the JSON file
 
 - [Base64 Decode](https://www.base64decode.org/)
+
+### Init Firebase in the App
+
+```sh
+npm i firebase-admin
+```
+
+### Init the authjs in the app
+
+- [Auth.js](https://authjs.dev/)
+
+```sh
+pnpm add next-auth@beta
+pnpm add @auth/firebase-adapter firebase-admin@12.6.0
+```
+
+### Google config and add authentication

@@ -2,9 +2,7 @@ import Header from '@/app/components/landing-page/header'
 import { Button } from '@/app/components/ui/button'
 
 interface UpgradePageProps {
-  params: {
-    profileId: string
-  }
+  params: Promise<{ profileId: string }>
 }
 
 export default async function UpgradePage({ params }: UpgradePageProps) {
