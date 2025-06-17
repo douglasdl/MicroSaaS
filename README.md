@@ -57,3 +57,43 @@ npm i lucide-react
 ### Total Visits component
 
 ### Finish the Hero Section
+
+### Create the Header component
+
+### Create the Video and Prices Sections
+
+### Finish the Landing Page
+
+### Create Link Page
+
+### Create the Dashboard interface
+
+### Create the Upgrade page Interface
+
+## External Providers
+
+### Firebase Explanation
+
+- [Firebase](https://firebase.google.com/)
+
+- [Firebase / Console](https://console.firebase.google.com/)
+
+- 1. Click in the "Create a Firebase project" button
+- 2. Insert the project name then click the "Continue" button
+- 3. Wait the loader then click the "Continue" button
+- 4. In the Overview page, click in the "Cloud Firestore" button
+  - 4.1. Click on the "Create Database" button
+  - 4.2. Select the database location in the Select list then click the "Next" button
+  - 4.3. Select the "Production mode" then click the "Create" button
+- 5. In the Overview page, click in the "Storage" button
+  - 5.1. Click on the "Make Project Upgrade" button
+  - 5.2. Click on the "Create a Cloud Billing Account" button
+  - 5.3. Add the Credit Card Info
+  - 5.4. Define a monthly budget
+  - 5.5. Click on the "Link with Cloud Billing Account" button
+  - 5.6. Click on the "Finish" button
+- 6. Click on the "Gear" icon then click on "Project Settings" button
+- 7. Click on the "Services Accounts" tab
+- 8. Click on the "Generate new private key" button then dloanlod the JSON file
+
+- [Base64 Decode](https://www.base64decode.org/)
