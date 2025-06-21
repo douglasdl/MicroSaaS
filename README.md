@@ -121,4 +121,20 @@ pnpm add @auth/firebase-adapter firebase-admin@12.6.0
 
 ### Create Link
 
-###
+### Component: Modal and get project data
+
+### Create Project modal styles
+
+### Finish the Create Project modal
+
+### List the projects
+
+### Add Social Networks
+
+### Social Networks Buttons
+
+### Add Customized Links
+
+### Edit Profile Data
+
+## Add Stripe and Adjustments
