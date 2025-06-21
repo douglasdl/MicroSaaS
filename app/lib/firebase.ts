@@ -2,10 +2,11 @@ import { cert, getApps, initializeApp } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
 import { getStorage } from 'firebase-admin/storage'
 import 'server-only'
+import { env } from '@/app/env'
 
 // Certificate
 const decodedKey = Buffer.from(
-  process.env.FIREBASE_PRIVATE_KEY_BASE64 ??
+  env.FIREBASE_PRIVATE_KEY_BASE64 ??
     (() => {
       throw new Error('FIREBASE_PRIVATE_KEY_BASE64 is not defined')
     })(),
@@ -13,8 +14,8 @@ const decodedKey = Buffer.from(
 ).toString('utf-8')
 
 export const firebaseCert = cert({
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+  projectId: env.FIREBASE_PROJECT_ID,
+  clientEmail: env.FIREBASE_CLIENT_EMAIL,
   privateKey: decodedKey,
 })
 
@@ -22,7 +23,7 @@ export const firebaseCert = cert({
 if (!getApps().length) {
   initializeApp({
     credential: firebaseCert,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    storageBucket: env.FIREBASE_STORAGE_BUCKET,
   })
 }
 

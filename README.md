@@ -114,3 +114,11 @@ pnpm add @auth/firebase-adapter firebase-admin@12.6.0
 ```
 
 ### Google config and add authentication
+
+- [Google OAuth Configuration](https://console.developers.google.com/apis/credentials)
+
+## Create Bio and Project
+
+### Create Link
+
+###
