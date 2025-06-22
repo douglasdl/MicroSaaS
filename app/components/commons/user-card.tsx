@@ -30,11 +30,15 @@ export function UserCard() {
       </div>
       <div className="flex flex-col gap-2 w-full">
         <span className="uppercase text-xs font-medium">Links</span>
-        <div className="flex gap-3 justify-between">
-          {icons.map(Icon => (
-            <Button variant="tertiary" key={Icon.name}>
+        <div className="flex gap-3">
+          {icons.map((Icon, index) => (
+            <button
+              key={index}
+              type="button"
+              className="p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E]"
+            >
               <Icon />
-            </Button>
+            </button>
           ))}
         </div>
       </div>
