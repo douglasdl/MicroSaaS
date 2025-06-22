@@ -127,6 +127,10 @@ pnpm add @auth/firebase-adapter firebase-admin@12.6.0
 
 ### Finish the Create Project modal
 
+```sh
+pnpm i browser-image-compression
+```
+
 ### List the projects
 
 ### Add Social Networks
