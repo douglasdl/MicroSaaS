@@ -1,6 +1,7 @@
 'use client'
 
 import createSocialLinks from '@/app/actions/create-social-links'
+import type { ProfileData } from '@/app/server/get-profile-data'
 import { Plus } from 'lucide-react'
 import { useParams, useRouter } from 'next/navigation'
 import { startTransition, useState } from 'react'
@@ -10,19 +11,19 @@ import { TextInput } from '../../ui/text-input'
 import { icons } from './social-links'
 
 interface EditSocialLinksProps {
-  title?: string
+  socialMedias?: ProfileData['socialMedias']
 }
 
-export function EditSocialLinks({ title }: EditSocialLinksProps) {
+export function EditSocialLinks({ socialMedias }: EditSocialLinksProps) {
   const { profileId } = useParams()
   const router = useRouter()
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isSavingSocialLinks, setIsSavingSocialLinks] = useState(false)
-  const [github, setGithub] = useState('')
-  const [instagram, setInstagram] = useState('')
-  const [linkedIn, setLinkedIn] = useState('')
-  const [twitter, setTwitter] = useState('')
+  const [github, setGithub] = useState(socialMedias?.github || '')
+  const [instagram, setInstagram] = useState(socialMedias?.instagram || '')
+  const [linkedIn, setLinkedIn] = useState(socialMedias?.linkedin || '')
+  const [twitter, setTwitter] = useState(socialMedias?.twitter || '')
 
   const socialLinkStates: Record<
     string,

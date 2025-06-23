@@ -4,14 +4,14 @@ import type { ProjectData } from '@/app/server/get-profile-data'
 import Link from 'next/link'
 
 interface ProjectCardProps {
-  project: ProjectData
-  isOwner: boolean
-  img: string
+  project?: ProjectData
+  isOwner?: boolean
+  img?: string
 }
 
 export function ProjectCard({ project, isOwner, img }: ProjectCardProps) {
-  const projectUrl = project.projectUrl
-  const formattedUrl = projectUrl.startsWith('http')
+  const projectUrl = project?.projectUrl
+  const formattedUrl = projectUrl?.startsWith('http')
     ? projectUrl
     : `https://${projectUrl}`
 
@@ -28,13 +28,13 @@ export function ProjectCard({ project, isOwner, img }: ProjectCardProps) {
         <div className="flex flex-col gap-2">
           {isOwner && (
             <span className="uppercase text-xs font-bold text-accent-green">
-              {project.totalVisits || 0} Cliques
+              {project?.totalVisits || 0} Cliques
             </span>
           )}
           <div className="flex flex-col">
-            <span className="text-white font-bold">{project.projectName}</span>
+            <span className="text-white font-bold">{project?.projectName}</span>
             <span className="text-content-body text-sm">
-              {project.projectDescription}
+              {project?.projectDescription}
             </span>
           </div>
         </div>
