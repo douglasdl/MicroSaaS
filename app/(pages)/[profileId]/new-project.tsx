@@ -17,7 +17,7 @@ interface NewProjectProps {
 export function NewProject({ profileId }: NewProjectProps) {
   const router = useRouter()
 
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const [projectName, setProjectName] = useState('')
   const [projectDescription, setProjectDescription] = useState('')
   const [projectUrl, setProjectUrl] = useState('')
