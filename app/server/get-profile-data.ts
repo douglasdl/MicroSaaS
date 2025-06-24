@@ -1,4 +1,5 @@
 import 'server-only'
+import type { LinkProps } from '../actions/add-custom-links'
 import { db } from '../lib/firebase'
 
 export type ProfileData = {
@@ -11,6 +12,9 @@ export type ProfileData = {
     linkedin: string
     twitter: string
   }
+  link1?: LinkProps
+  link2?: LinkProps
+  link3?: LinkProps
   updatedAt?: number
 }
 

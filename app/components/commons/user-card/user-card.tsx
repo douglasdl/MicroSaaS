@@ -1,8 +1,11 @@
+'use client'
+
 import { EditSocialLinks } from '@/app/components/commons/user-card/edit-social-links'
 import { Button } from '@/app/components/ui/button'
+import { formatUrl } from '@/app/lib/utils'
 import type { ProfileData } from '@/app/server/get-profile-data'
-import { Plus } from 'lucide-react'
 import Link from 'next/link'
+import { AddCustomLink } from './add-custom-link'
 import { icons } from './social-links'
 
 interface UserCardProps {
@@ -51,12 +54,36 @@ export function UserCard({ profileData }: UserCardProps) {
           <EditSocialLinks socialMedias={profileData?.socialMedias} />
         </div>
       </div>
-      <div className="flex flex-col gap-3 w-full h-[172px]">
+      <div className="flex flex-col gap-3 w-full min-h-[172px]">
         <div className="w-full flex flex-col items-center gap-3">
-          <Button className="w-full">Template SaaS - Compre Agora</Button>
-          <Button variant="tertiary">
-            <Plus />
-          </Button>
+          {profileData?.link1 && (
+            <Link
+              href={formatUrl(profileData.link1.url)}
+              target="_blank"
+              className="w-full"
+            >
+              <Button className="w-full">{profileData?.link1?.title}</Button>
+            </Link>
+          )}
+          {profileData?.link2 && (
+            <Link
+              href={formatUrl(profileData.link2.url)}
+              target="_blank"
+              className="w-full"
+            >
+              <Button className="w-full">{profileData?.link2?.title}</Button>
+            </Link>
+          )}
+          {profileData?.link3 && (
+            <Link
+              href={formatUrl(profileData.link3.url)}
+              target="_blank"
+              className="w-full"
+            >
+              <Button className="w-full">{profileData?.link3?.title}</Button>
+            </Link>
+          )}
+          <AddCustomLink />
         </div>
       </div>
     </div>
