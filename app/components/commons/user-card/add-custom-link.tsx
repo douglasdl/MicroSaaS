@@ -1,6 +1,7 @@
 'use client'
 
 import { AddCustomLinks } from '@/app/actions/add-custom-links'
+import type { ProfileData } from '@/app/server/get-profile-data'
 import { Plus } from 'lucide-react'
 import { useParams, useRouter } from 'next/navigation'
 import { startTransition, useState } from 'react'
@@ -8,16 +9,29 @@ import { Button } from '../../ui/button'
 import { Modal } from '../../ui/modal'
 import { TextInput } from '../../ui/text-input'
 
-export function AddCustomLink() {
+interface AddCustomLinkProps {
+  profileData?: ProfileData
+}
+
+export function AddCustomLink({ profileData }: AddCustomLinkProps) {
   const router = useRouter()
   const { profileId } = useParams()
 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isSavingCustomLinks, setIsSavingCustomLinks] = useState(false)
 
-  const [link1, setLink1] = useState({ title: '', url: '' })
-  const [link2, setLink2] = useState({ title: '', url: '' })
-  const [link3, setLink3] = useState({ title: '', url: '' })
+  const [link1, setLink1] = useState({
+    title: profileData?.link1?.title,
+    url: profileData?.link1?.url,
+  })
+  const [link2, setLink2] = useState({
+    title: profileData?.link2?.title,
+    url: profileData?.link2?.url,
+  })
+  const [link3, setLink3] = useState({
+    title: profileData?.link3?.title,
+    url: profileData?.link3?.url,
+  })
 
   function handleOpenModal() {
     setIsModalOpen(true)
@@ -34,9 +48,9 @@ export function AddCustomLink() {
 
     await AddCustomLinks({
       profileId: profileId as string,
-      link1,
-      link2,
-      link3,
+      link1: { title: link1.title ?? '', url: link1.url ?? '' },
+      link2: { title: link2.title ?? '', url: link2.url ?? '' },
+      link3: { title: link3.title ?? '', url: link3.url ?? '' },
     })
 
     startTransition(() => {

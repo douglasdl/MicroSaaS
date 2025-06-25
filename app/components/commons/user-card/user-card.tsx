@@ -83,7 +83,7 @@ export function UserCard({ profileData }: UserCardProps) {
               <Button className="w-full">{profileData?.link3?.title}</Button>
             </Link>
           )}
-          <AddCustomLink />
+          <AddCustomLink profileData={profileData} />
         </div>
       </div>
     </div>
