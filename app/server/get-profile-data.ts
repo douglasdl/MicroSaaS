@@ -4,6 +4,9 @@ import { db } from '../lib/firebase'
 
 export type ProfileData = {
   userId: string
+  name: string
+  description: string
+  imagePath: string
   totalVisits: number
   createdAt: number
   socialMedias?: {
