@@ -142,3 +142,21 @@ pnpm i browser-image-compression
 ### Edit Profile Data
 
 ## Add Stripe and Adjustments
+
+### Add page Views and Clicks
+
+### Fix the components
+
+### Configure the Stripe Keys
+
+### Create the Stripe checkout
+
+### Lifetime Checkout
+
+### Configure the Stripe Webhooks
+
+### User Flow Adjustments
+
+### User Control
+
+### Create Stripe Portal
