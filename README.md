@@ -145,7 +145,7 @@ pnpm i browser-image-compression
 
 ### Add page Views and Clicks
 
-### Fix the components
+### Fix the components in the Landing page
 
 ### Configure the Stripe Keys
 

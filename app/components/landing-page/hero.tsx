@@ -1,8 +1,6 @@
-import type { ProjectData } from '@/app/server/get-profile-data'
 import { ProjectCard } from '../commons/project-card'
 import { TotalVisits } from '../commons/total-visits'
 import { UserCard } from '../commons/user-card/user-card'
-
 import { Button } from '../ui/button'
 import { TextInput } from '../ui/text-input'
 
@@ -31,10 +29,19 @@ export default function Hero() {
             <TotalVisits totalVisits={1356} />
           </div>
           <div className="absolute top-[20%] -left-[45%] -z-10">
-            <ProjectCard isOwner project={{} as ProjectData} img="" />
+            <ProjectCard
+              name="Projecto 1"
+              description="Descrição do projeto 1"
+              isOwner
+              img="project1.png"
+            />
           </div>
           <div className="absolute -top-[5%] -left-[55%] -z-10">
-            <ProjectCard isOwner project={{} as ProjectData} img="" />
+            <ProjectCard
+              name="Projeto 2"
+              description="Descrição do projeto 2"
+              img="project2.png"
+            />
           </div>
         </div>
       </div>

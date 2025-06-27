@@ -12,9 +12,13 @@ import { icons } from './social-links'
 
 interface EditSocialLinksProps {
   socialMedias?: ProfileData['socialMedias']
+  disabled?: boolean
 }
 
-export function EditSocialLinks({ socialMedias }: EditSocialLinksProps) {
+export function EditSocialLinks({
+  socialMedias,
+  disabled = false,
+}: EditSocialLinksProps) {
   const { profileId } = useParams()
   const router = useRouter()
 
@@ -36,6 +40,7 @@ export function EditSocialLinks({ socialMedias }: EditSocialLinksProps) {
   }
 
   function handleOpenModal() {
+    if (disabled) return
     setIsModalOpen(true)
   }
 
@@ -65,8 +70,9 @@ export function EditSocialLinks({ socialMedias }: EditSocialLinksProps) {
     <>
       <button
         type="button"
-        className="p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E]"
+        className={`p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E] ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
         onClick={handleOpenModal}
+        disabled={disabled}
       >
         <Plus />
       </button>

@@ -10,17 +10,21 @@ import { icons } from './social-links'
 
 interface UserCardProps {
   profileData?: ProfileData
-  isOwner: boolean
+  isOwner?: boolean
 }
 
-export async function UserCard({ profileData, isOwner }: UserCardProps) {
+export async function UserCard({
+  profileData,
+  isOwner = false,
+}: UserCardProps) {
   return (
     <div className="w-[348px] flex flex-col gap-5 items-center p-5 border border-white border-opacity-10 bg-[#121212] rounded-3xl text-white">
       <div className="size-48">
         <img
           className="rounded-full object-coverd w-full h-fulld"
           src={
-            (await getDownloadURLFromPath(profileData?.imagePath)) || '/me.webp'
+            (await getDownloadURLFromPath(profileData?.imagePath)) ||
+            'http://github.com/douglasdl.png'
           }
           alt={profileData?.name || 'Douglas Dias Leal'}
         />
@@ -39,31 +43,44 @@ export async function UserCard({ profileData, isOwner }: UserCardProps) {
       <div className="flex flex-col gap-2 w-full">
         <span className="uppercase text-xs font-medium">Links</span>
         <div className="flex gap-3">
-          {icons.map(({ component: Icon, name }) => {
-            const key = name.toLowerCase()
-            const url =
-              profileData?.socialMedias?.[
-                key as keyof typeof profileData.socialMedias
-              ]
-            if (!url) return null
-            return (
-              <Link
-                href={`http://${url}`}
-                target="_blank"
-                key={name}
-                className="p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E]"
-              >
-                <Icon />
-              </Link>
-            )
-          })}
+          {!profileData
+            ? icons.map(({ component: Icon, name }) => (
+                <div
+                  key={name}
+                  className="p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E]"
+                >
+                  <Icon />
+                </div>
+              ))
+            : icons.map(({ component: Icon, name }) => {
+                const key = name.toLowerCase()
+                const url =
+                  profileData?.socialMedias?.[
+                    key as keyof typeof profileData.socialMedias
+                  ]
+                if (!url) return null
+                return (
+                  <Link
+                    href={`http://${url}`}
+                    target="_blank"
+                    key={name}
+                    className="p-3 rounded-xl bg-[#1E1E1E] hover:bg-[#2E2E2E]"
+                  >
+                    <Icon />
+                  </Link>
+                )
+              })}
           {isOwner && (
-            <EditSocialLinks socialMedias={profileData?.socialMedias} />
+            <EditSocialLinks
+              socialMedias={profileData?.socialMedias}
+              disabled={!profileData}
+            />
           )}
         </div>
       </div>
       <div className="flex flex-col gap-3 w-full min-h-[172px]">
         <div className="w-full flex flex-col items-center gap-3">
+          {!profileData && <Button className="w-full">Portfolio</Button>}
           {profileData?.link1 && (
             <Link
               href={formatUrl(profileData.link1.url)}
@@ -91,7 +108,9 @@ export async function UserCard({ profileData, isOwner }: UserCardProps) {
               <Button className="w-full">{profileData?.link3?.title}</Button>
             </Link>
           )}
-          {isOwner && <AddCustomLink profileData={profileData} />}
+          {isOwner && (
+            <AddCustomLink profileData={profileData} disabled={!profileData} />
+          )}
         </div>
       </div>
     </div>

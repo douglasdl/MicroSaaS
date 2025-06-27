@@ -11,9 +11,13 @@ import { TextInput } from '../../ui/text-input'
 
 interface AddCustomLinkProps {
   profileData?: ProfileData
+  disabled?: boolean
 }
 
-export function AddCustomLink({ profileData }: AddCustomLinkProps) {
+export function AddCustomLink({
+  profileData,
+  disabled = false,
+}: AddCustomLinkProps) {
   const router = useRouter()
   const { profileId } = useParams()
 
@@ -34,6 +38,7 @@ export function AddCustomLink({ profileData }: AddCustomLinkProps) {
   })
 
   function handleOpenModal() {
+    if (disabled) return
     setIsModalOpen(true)
   }
 
@@ -62,7 +67,7 @@ export function AddCustomLink({ profileData }: AddCustomLinkProps) {
 
   return (
     <>
-      <Button variant="tertiary" onClick={handleOpenModal}>
+      <Button variant="tertiary" onClick={handleOpenModal} disabled={disabled}>
         <Plus />
       </Button>
       <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>

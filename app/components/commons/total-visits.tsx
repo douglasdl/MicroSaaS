@@ -2,7 +2,7 @@ import { TrendingUp } from 'lucide-react'
 import { Button } from '../ui/button'
 
 interface TotalVisitsProps {
-  totalVisits: number
+  totalVisits?: number
 }
 
 export function TotalVisits({ totalVisits = 0 }: TotalVisitsProps) {
