@@ -149,6 +149,20 @@ pnpm i browser-image-compression
 
 ### Configure the Stripe Keys
 
+- [Stripe](https://stripe.com/en-jp)
+
+Login
+
+```sh
+stripe login
+```
+
+Forward events to the webhook (generate the weebhook secret):
+
+```sh
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+```
+
 ### Create the Stripe checkout
 
 ### Lifetime Checkout
