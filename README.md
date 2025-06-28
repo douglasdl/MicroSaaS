@@ -165,6 +165,13 @@ stripe listen --forward-to localhost:3000/api/stripe/webhook
 
 ### Create the Stripe checkout
 
+```sh
+pnpm i stripe
+pnpm i @stripe/stripe-js
+```
+
+- Test Credit Card: 4242 4242 4242 4242
+
 ### Lifetime Checkout
 
 ### Configure the Stripe Webhooks

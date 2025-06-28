@@ -4,6 +4,8 @@ import { getStorage } from 'firebase-admin/storage'
 import 'server-only'
 import { env } from '@/app/env'
 
+console.log(env)
+
 // Certificate
 const decodedKey = Buffer.from(
   env.FIREBASE_PRIVATE_KEY_BASE64 ??

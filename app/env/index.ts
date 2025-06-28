@@ -8,6 +8,11 @@ const envSchema = z.object({
   AUTH_GOOGLE_ID: z.string(),
   AUTH_GOOGLE_SECRET: z.string(),
   AUTH_SECRET: z.string(),
+  STRIPE_PRICE_ID: z.string(),
+  STRIPE_SUBSCRIPTION_PRICE_ID: z.string(),
+  STRIPE_SECRET_KEY: z.string(),
+  STRIPE_WEBHOOK_SECRET: z.string(),
+  NEXT_PUBLIC_STRIPE_PUB_KEY: z.string(),
 
   NODE_ENV: z.enum(['production', 'development', 'test']),
 })
