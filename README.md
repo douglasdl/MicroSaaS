@@ -176,6 +176,13 @@ pnpm i @stripe/stripe-js
 
 ### Configure the Stripe Webhooks
 
+Keep listen the webhooks events:
+
+```sh
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+
+```
+
 ### User Flow Adjustments
 
 ### User Control
