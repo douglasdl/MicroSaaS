@@ -33,16 +33,18 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
     await increaseProfileVisits(profileId)
   }
 
-  // TODO: If user not has an active account, redirect to upgrade page
+  console.log(session)
 
   return (
     <div className="relative h-screen flex p-20 overflow-hidden">
-      <div className="fixed top-0 left-0 w-full flex justify-center items-center gap-1 py-2 bg-background-tertiary">
-        <span>Você está usando a versão trial.</span>
-        <Link href={`/${profileId}/upgrade`}>
-          <Button variant="link">Faça o upgrade agora</Button>
-        </Link>
-      </div>
+      {session?.user.isTrial && !session.user.isPaid && (
+        <div className="fixed top-0 left-0 w-full flex justify-center items-center gap-1 py-2 bg-background-tertiary">
+          <span>Você está usando a versão trial.</span>
+          <Link href={`/${profileId}/upgrade`}>
+            <Button variant="link">Faça o upgrade agora</Button>
+          </Link>
+        </div>
+      )}
       <div className="w-1/2 flex justify-center h-min">
         <UserCard profileData={profileData} isOwner={isOwner} />
       </div>

@@ -54,5 +54,5 @@ export async function getProfileId(userId: string) {
     .collection('profiles')
     .where('userId', '==', userId)
     .get()
-  return snapshot.docs[0].id
+  return snapshot.docs.map(doc => doc.id)[0]
 }
