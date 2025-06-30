@@ -11,6 +11,7 @@ export function PlanButtons() {
   return (
     <div className="flex gap-4">
       <Button
+        className="min-w-40"
         onClick={() =>
           createStripeCheckout({
             metadata: { profileId },
@@ -21,6 +22,7 @@ export function PlanButtons() {
         R$ 9,90 / mês
       </Button>
       <Button
+        className="min-w-40"
         onClick={() =>
           createStripeCheckout({
             metadata: { profileId },
