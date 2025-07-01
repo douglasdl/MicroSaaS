@@ -188,3 +188,27 @@ stripe listen --forward-to localhost:3000/api/stripe/webhook
 ### User Control
 
 ### Create Stripe Portal
+
+## Set the App to Production
+
+### App Deploy
+
+- [Vercel](https://vercel.com/)
+
+### Analytics
+
+- [Google Analytics](https://analytics.google.com/)
+- [Mix Panel](https://mixpanel.com/)
+- [Next.js](https://nextjs.org/docs/messages/next-script-for-ga)
+
+```sh
+pnpm i @next/third-parties
+```
+
+### SEO Tags
+
+### Programatic SEO
+
+### Send e-mail with Resend
+
+### Conclusion
