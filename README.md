@@ -203,6 +203,7 @@ stripe listen --forward-to localhost:3000/api/stripe/webhook
 
 ```sh
 pnpm i @next/third-parties
+pnpm i mixpanel
 ```
 
 ### SEO Tags
