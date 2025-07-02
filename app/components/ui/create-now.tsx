@@ -10,7 +10,7 @@ export default function CreateNow() {
   const [link, setLink] = useState('')
 
   return (
-    <div className="flex items-center gap-2 w-full mt-[10vh]">
+    <div className="absolute md:relative bottom-10 right-4 md:right-auto left-4 md:left-auto flex items-center gap-2 md:w-full mt-[10vh]">
       <span className="text-white text-xl">{DOMAIN}/</span>
       <TextInput
         placeholder="Seu link"

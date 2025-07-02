@@ -11,7 +11,7 @@ export default function Home() {
   })
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4 w-full">
       <Header />
       <Hero />
       <VideoExplanation />
