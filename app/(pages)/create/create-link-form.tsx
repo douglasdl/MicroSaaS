@@ -4,6 +4,7 @@ import { createLink } from '@/app/actions/create-link'
 import { verifyLink } from '@/app/actions/verify-link'
 import { Button } from '@/app/components/ui/button'
 import { TextInput } from '@/app/components/ui/text-input'
+import { DOMAIN } from '@/app/lib/config'
 import { sanitizeLink } from '@/app/lib/utils'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { type ChangeEvent, type FormEvent, useState } from 'react'
@@ -39,7 +40,7 @@ export default function CreateLinkForm() {
   return (
     <>
       <form onSubmit={handleSubmit} className="w-full flex items-center gap-2">
-        <span className="text-white">projectinbio.com/</span>
+        <span className="text-white">{DOMAIN}/</span>
         <TextInput value={link} onChange={handleLinkChange} />
         <Button className="w-[126px]">Criar</Button>
       </form>

@@ -1,5 +1,6 @@
 'use client'
 
+import { DOMAIN } from '@/app/lib/config'
 import { signIn } from 'next-auth/react'
 import { useState } from 'react'
 import { Button } from './button'
@@ -10,7 +11,7 @@ export default function CreateNow() {
 
   return (
     <div className="flex items-center gap-2 w-full mt-[10vh]">
-      <span className="text-white text-xl">projectinbio.com/</span>
+      <span className="text-white text-xl">{DOMAIN}/</span>
       <TextInput
         placeholder="Seu link"
         value={link}
