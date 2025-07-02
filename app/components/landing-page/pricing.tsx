@@ -16,8 +16,8 @@ export default function Pricing() {
           compromisso!
         </p>
       </div>
-      <div className="flex items-end gap-9">
-        <div className="w-[304px] p-8 flex flex-col gap-7 rounded-2xl border border-[#1E1E1E]">
+      <div className="flex flex-col md:flex-row md:w-auto items-end gap-9">
+        <div className="w-96 md:w-[304px] p-8 flex flex-col gap-7 rounded-2xl border border-[#1E1E1E]">
           <div className="flex flex-col">
             <span className="text-white font-bold text-2xl">Mensal</span>
             <span className="text-content-body">Apenas</span>
@@ -29,7 +29,7 @@ export default function Pricing() {
           <Button variant="secondary">Assinar</Button>
         </div>
         <div className="flex flex-col">
-          <div className="flex justify-center items-center rounded-t-2xl p-2 w-[304px] bg-[linear-gradient(90deg,#4B2DBB_0%,#B5446B_100%)]">
+          <div className="flex justify-center items-center rounded-t-2xl p-2 w-96 md:w-[304px] bg-[linear-gradient(90deg,#4B2DBB_0%,#B5446B_100%)]">
             <span className="uppercase text-xs font-bold">Recomendado</span>
           </div>
           <div className="p-[1.6px] bg-[linear-gradient(90deg,#4B2DBB_0%,#B5446B_100%)] rounded-b-2xl">

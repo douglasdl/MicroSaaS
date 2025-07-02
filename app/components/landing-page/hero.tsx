@@ -20,10 +20,10 @@ export default function Hero() {
       <div className="w-full flex items-center justify-center bg-[radial-gradient(circle_at_50%_50%,#4B2DBB,transparent_55%)]">
         <div className="relative">
           <UserCard isOwner />
-          <div className="absolute -bottom-[7%] md:-left-[45%] left-auto md:-right-[45%]">
+          <div className="absolute -bottom-20 right-[40%] md:-right-[45%]">
             <TotalVisits totalVisits={1356} />
           </div>
-          <div className="absolute top-[20%] -left-[45%] -z-10">
+          <div className="absolute -top-[10%] md:top-[20%] -left-[45%] -z-10">
             <ProjectCard
               name="Projecto 1"
               description="Descrição do projeto 1"
@@ -31,7 +31,7 @@ export default function Hero() {
               img="project1.png"
             />
           </div>
-          <div className="absolute -top-[5%] -left-[55%] -z-10">
+          <div className="absolute -top-[45%] md:-top-[5%] -left-[55%] -z-10">
             <ProjectCard
               name="Projeto 2"
               description="Descrição do projeto 2"
