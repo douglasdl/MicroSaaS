@@ -1,0 +1,9 @@
+# *
+
+User-agent: *
+
+# Host: https://www.projectinbio.misemachi.jp
+
+#Sitemap:
+Sitemap: https://www.projectinbio.misemachi.jp/sitemap.xml
+

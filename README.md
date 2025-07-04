@@ -208,6 +208,8 @@ pnpm i mixpanel
 
 ### SEO Tags
 
+- [Google Search Console](https://search.google.com/search-console/about)
+
 ### Programatic SEO
 
 ### Send e-mail with Resend

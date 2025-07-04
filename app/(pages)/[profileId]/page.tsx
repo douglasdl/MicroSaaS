@@ -9,9 +9,15 @@ import {
   getProfileData,
   getProfileProjects,
 } from '@/app/server/get-profile-data'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 import { NewProject } from './new-project'
+
+export const metadata: Metadata = {
+  title: 'ProjectInBio - Perfil',
+  description: 'ProjectInBio - A plataforma de gestão de projetos',
+}
 
 interface ProfilePageProps {
   params: Promise<{ profileId: string }>

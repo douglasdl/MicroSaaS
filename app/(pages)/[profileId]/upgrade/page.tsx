@@ -1,5 +1,11 @@
 import Header from '@/app/components/landing-page/header'
+import type { Metadata } from 'next'
 import { PlanButtons } from './plan-buttons'
+
+export const metadata: Metadata = {
+  title: 'ProjectInBio - Upgrade',
+  description: 'ProjectInBio - A plataforma de gestão de projetos',
+}
 
 interface UpgradePageProps {
   params: Promise<{ profileId: string }>
